@@ -8,10 +8,13 @@ import errorMiddleware from "./middlewares/errorMiddleware";
 import * as userController from "./controller/user";
 import *  as sliderController from './controller/slider';
 import * as lessonController from "./controller/lesson";
-import "dotenv/config";
+import dotenv from "dotenv";
 import multer from "multer";
 import path from "path";
 import { Slider, Lesson } from './models';
+
+dotenv.config({ path: path.resolve(__dirname, `../config/.env.${process.env.NODE_ENV}`)});
+
 const storage = multer.diskStorage({
   destination: path.join(__dirname, "public", "uploads"),
   filename(_req: Request, file: Express.Multer.File, cb) {
@@ -63,7 +66,7 @@ const PORT: number = (process.env.DEMO_PORT && parseInt(process.env.DEMO_PORT)) 
   if (process.env.DEMO_USERNAME) {
     authString = process.env.DEMO_USERNAME + ":" + process.env.DEMO_PASSWORD + "@";
   }
-  const dbURL = "mongodb://" + authString + "localhost/reactmobile";
+  const dbURL = "mongodb://" + authString + "localhost/admin";
   console.log('dbURL', dbURL);
 
   await mongoose.connect(dbURL);
