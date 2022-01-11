@@ -6,6 +6,6 @@ tell application "iTerm"
     end tell
     set T to W's current tab
     set ProjectRoot to "$(dirname $(dirname $(dirname $(dirname " & (POSIX path of (path to me)) & "))))"
-    write T's session 1 text "pnpm --cwd \"" & ProjectRoot & "/back-end\" dev"
-    write T's session 2 text "pnpm --cwd \"" & ProjectRoot & "/front-end\" dev"
+    write T's session 1 text "yarn --cwd \"" & ProjectRoot & "/back-end\" dev"
+    write T's session 2 text "yarn --cwd \"" & ProjectRoot & "/front-end\" dev"
 end tell

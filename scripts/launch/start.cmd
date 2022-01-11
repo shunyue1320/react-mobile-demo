@@ -1,5 +1,5 @@
 @echo off
 setlocal
-start cmd /c "pnpm --cwd back-end dev"
-start cmd /c "pnpm --cwd front-end dev"
+start cmd /c "yarn --cwd back-end dev"
+start cmd /c "yarn --cwd front-end dev"
 exit

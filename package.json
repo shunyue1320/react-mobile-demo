@@ -6,13 +6,13 @@
   "author": "shunyue1320 <tsunyue1320@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node scripts/launch/index.js",
+    "dev": "node scripts/launch/index.js",
     "bulid": ""
   },
   "workspaces": {
     "packages": [
-      "back-end/*",
-      "front-end/*"
+      "back-end",
+      "front-end"
     ]
   }
 }
