@@ -5,7 +5,7 @@ const initialState: CartState = {};
 function cart(state: CartState = initialState, action: AnyAction) {
   switch (action.type) {
     default:
-      break;
+      return state;
   }
 }
 
