@@ -1,8 +1,6 @@
-import React from 'react';
+import React from "react";
 
 function Profile() {
-    return (
-        <div>Cart</div>
-    )
+  return <div>Profile</div>;
 }
 export default Profile;
