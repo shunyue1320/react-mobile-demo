@@ -10,6 +10,8 @@ import Tabs from "./components/Tabs";
 import Home from "./routes/Home";
 import Cart from "./routes/Cart";
 import Profile from "./routes/Profile";
+import Register from "./routes/Register";
+import Login from "./routes/Login";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -19,6 +21,8 @@ ReactDOM.render(
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
       <Tabs />
