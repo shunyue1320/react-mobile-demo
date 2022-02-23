@@ -12,6 +12,7 @@ import Cart from "./routes/Cart";
 import Profile from "./routes/Profile";
 import Register from "./routes/Register";
 import Login from "./routes/Login";
+import Detail from './routes/Detail';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </main>
       <Tabs />

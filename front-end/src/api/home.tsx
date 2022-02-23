@@ -4,7 +4,7 @@ export function getSliders() {
   return axios.get("/slider/list");
 }
 
-export function getLessions(
+export function getLessons(
   currentCategory: string = "all",
   offset: number,
   limit: number
