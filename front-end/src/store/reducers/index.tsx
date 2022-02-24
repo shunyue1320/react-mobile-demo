@@ -1,10 +1,12 @@
-import { combineReducers } from "redux";
-import { RouterState } from "redux-first-history";
-import { routerReducer } from "@/history";
+import produce from 'immer';
+import { combineReducers } from 'redux-immer';
+import { RouterState } from 'redux-first-history';
+import { routerReducer } from '@/history';
 
-import home, { HomeState } from "./home";
-import cart, { CartState } from "./cart";
-import profile, { ProfileState } from "./profile";
+import home, { HomeState } from './home';
+import cart from './cart';
+import { CartState } from '@/typings/cart';
+import profile, { ProfileState } from './profile';
 
 const reducers = {
   router: routerReducer,
@@ -14,12 +16,11 @@ const reducers = {
 };
 
 export type CombinedState = {
-  router: RouterState;
-  home: HomeState;
-  cart: CartState;
-  profile: ProfileState;
-};
+  router: RouterState,
+  home: HomeState,
+  cart: CartState,
+  profile: ProfileState
+}
 
-const combinedReducer = combineReducers(reducers);
-
+const combinedReducer = combineReducers(produce, reducers);
 export default combinedReducer;
