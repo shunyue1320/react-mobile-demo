@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import { HistoryRouter } from "redux-first-history/rr6";
 import { PersistGate } from "redux-persist/integration/react";
-import { store, history } from "./store";
+import { store, history, persistor } from "./store";
 import { Spin } from "antd";
 
 import "./style/common.less";

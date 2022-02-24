@@ -12,6 +12,10 @@ type Props = PropsWithChildren<{
   homeContainerRef: RefObject<any>;
 }>;
 
+interface VisibleLesson extends Lesson {
+  index: number;
+}
+
 function LessonList(props: Props, forwardRef: any) {
   const [, forceUpdate] = React.useReducer((x) => x + 1, 0);
 
@@ -117,4 +121,4 @@ function LessonList(props: Props, forwardRef: any) {
   );
 }
 
-export default LessonList;
+export default React.forwardRef(LessonList);
