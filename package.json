@@ -1,5 +1,6 @@
 {
   "name": "react-mobile-demo",
+  "private": true,
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/shunyue1320/react-mobile-demo.git",
@@ -7,7 +8,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "node scripts/launch/index.js",
-    "bulid": ""
+    "dev:back-end": " yarn workspace back-end dev",
+    "dev:front-end": " yarn workspace front-end dev",
+    "bulid:back-end": " yarn workspace back-end bulid",
+    "bulid:front-end": " yarn workspace front-end bulid"
   },
   "workspaces": {
     "packages": [
