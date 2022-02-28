@@ -39,12 +39,14 @@ function Home(props: Props) {
 
   React.useEffect(() => {
     let scrollTop = sessionStorage.getItem("scrollTop");
-    if (scrollTop) homeContainerRef.current.scrollTop = scrollTop;
+    if (scrollTop) {
+      homeContainerRef.current.scrollTop = scrollTop;
+    }
   });
 
   return (
     <>
-      <Spin size="large" />
+      {/* <Spin size="large" /> */}
       <HomeHeader
         setCurrentCategory={props.setCurrentCategory}
         currentCategory={props.currentCategory}
@@ -63,5 +65,4 @@ function Home(props: Props) {
 }
 
 const mapStateToProps = (state: CombinedState): HomeState => state.home;
-
 export default connect(mapStateToProps, actionCreators)(Home);

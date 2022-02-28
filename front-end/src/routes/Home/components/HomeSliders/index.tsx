@@ -10,19 +10,18 @@ type Props = PropsWithChildren<{
 
 function HomeSliders(props: Props) {
   React.useEffect(() => {
-    if (props.sliders.length == 0) {
+    if (props.sliders.length === 0) {
       props.getSliders();
     }
   }, [])
-
   return (
     <Carousel effect="scrollx" autoplay>
       {
-        props.sliders.map((item: Slider, index: number) => {
+        props.sliders.map((item: Slider, index: number) => (
           <div key={index}>
             <img src={item.url} />
           </div>
-        })
+        ))
       }
     </Carousel>
   )

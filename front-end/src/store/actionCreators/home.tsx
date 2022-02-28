@@ -20,7 +20,7 @@ const actions = {
           const result = await getLessons(currentCategory, offset, limit);
           dispatch({ type: actionTypes.SET_LESSONS, payload: result.data });
         }
-      })
+      })();
     }
   },
   refreshLesson() {
@@ -32,7 +32,7 @@ const actions = {
           const result = await getLessons(currentCategory, 0, offset);
           dispatch({ type: actionTypes.REFRESH_LESSONS, payload: result.data });
         }
-      })
+      })();
     }
   }
 };
