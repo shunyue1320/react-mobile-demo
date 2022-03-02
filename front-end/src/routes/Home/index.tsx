@@ -46,7 +46,7 @@ function Home(props: Props) {
 
   return (
     <>
-      {/* <Spin size="large" /> */}
+      <Spin size="large" />
       <HomeHeader
         setCurrentCategory={props.setCurrentCategory}
         currentCategory={props.currentCategory}

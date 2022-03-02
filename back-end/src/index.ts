@@ -74,6 +74,8 @@ const PORT: number = (process.env.DEMO_PORT && parseInt(process.env.DEMO_PORT)) 
     console.log(`Running on http://localhost:${PORT}`);
   });
 })();
+
+// 向 sliders 表插入数据
 async function createSliders() {
   const sliders = await Slider.find();
   if (sliders.length == 0) {
@@ -88,6 +90,7 @@ async function createSliders() {
   }
 }
 
+// 向 Lessons 表插入数据
 async function createLessons() {
   const lessons = await Lesson.find();
   if (lessons.length == 0) {
